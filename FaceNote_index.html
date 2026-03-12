@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FaceNote - 面会記録・名刺管理アプリ</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+      background-color: #f5f5f7;
+      color: #1d1d1f;
+    }
+
+    header {
+      background-color: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #d2d2d7;
+      padding: 16px 24px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #1d1d1f;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 24px 60px;
+      background: linear-gradient(180deg, #ffffff 0%, #f5f5f7 100%);
+    }
+
+    .app-icon {
+      width: 120px;
+      height: 120px;
+      border-radius: 27px;
+      background-color: #d1e8ff;
+      margin: 0 auto 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 56px;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #6e6e73;
+      max-width: 500px;
+      margin: 0 auto 32px;
+      line-height: 1.6;
+    }
+
+    .hero p.en {
+      font-size: 15px;
+      margin-top: 8px;
+    }
+
+    .badge {
+      display: inline-block;
+    }
+
+    .badge img {
+      height: 48px;
+    }
+
+    .features {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+
+    .features h3 {
+      font-size: 28px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .features h3 span {
+      display: block;
+      font-size: 16px;
+      font-weight: 400;
+      color: #6e6e73;
+      margin-top: 4px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .feature-card {
+      background: #ffffff;
+      border-radius: 18px;
+      padding: 28px 24px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    .feature-card .icon {
+      font-size: 36px;
+      margin-bottom: 16px;
+    }
+
+    .feature-card h4 {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .feature-card h4 span {
+      display: block;
+      font-size: 13px;
+      font-weight: 400;
+      color: #6e6e73;
+    }
+
+    .feature-card p {
+      font-size: 14px;
+      color: #6e6e73;
+      line-height: 1.6;
+    }
+
+    .privacy-section {
+      background: #ffffff;
+      padding: 60px 24px;
+    }
+
+    .privacy-section .inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .privacy-section h3 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .privacy-section h3 span {
+      display: block;
+      font-size: 16px;
+      font-weight: 400;
+      color: #6e6e73;
+      margin-top: 4px;
+    }
+
+    .privacy-section p {
+      font-size: 15px;
+      color: #6e6e73;
+      line-height: 1.8;
+      margin-top: 20px;
+    }
+
+    .support-section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 24px;
+    }
+
+    .support-section h3 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .support-section h3 span {
+      display: block;
+      font-size: 16px;
+      font-weight: 400;
+      color: #6e6e73;
+      margin-top: 4px;
+    }
+
+    .faq {
+      margin-top: 32px;
+    }
+
+    .faq-item {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .faq-item dt {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .faq-item dd {
+      font-size: 14px;
+      color: #6e6e73;
+      line-height: 1.7;
+    }
+
+    footer {
+      background-color: #1d1d1f;
+      color: #a1a1a6;
+      text-align: center;
+      padding: 40px 24px;
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    footer a {
+      color: #a1a1a6;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #ffffff;
+    }
+
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 36px;
+      }
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>FaceNote</h1>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="app-icon">📇</div>
+    <h2>FaceNote</h2>
+    <p>
+      名刺と面会情報を、かんたんに記録・管理。<br>
+      <span class="en">Simply record and manage business cards and meeting notes.</span>
+    </p>
+    <!-- App Store バッジ（審査通過後にリンクを差し替えてください） -->
+    <!--
+    <a class="badge" href="https://apps.apple.com/app/idXXXXXXXXX">
+      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+    </a>
+    -->
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <h3>
+      主な機能
+      <span>Key Features</span>
+    </h3>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="icon">📝</div>
+        <h4>面会記録 <span>Meeting Records</span></h4>
+        <p>氏名・所属・日時・議事メモを記録できます。<br>Record name, organization, date, and meeting notes.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">📸</div>
+        <h4>名刺写真 <span>Business Card Photos</span></h4>
+        <p>カメラまたはライブラリから名刺を複数枚保存できます。<br>Save multiple card photos from camera or library.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">📅</div>
+        <h4>カレンダー <span>Calendar View</span></h4>
+        <p>日付別に面会記録を確認できます。<br>Browse meeting records by date.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🔍</div>
+        <h4>検索 <span>Search</span></h4>
+        <p>名前・所属で過去の記録をすばやく検索できます。<br>Quickly search past records by name or organization.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Privacy -->
+  <section class="privacy-section">
+    <div class="inner">
+      <h3>
+        プライバシーポリシー
+        <span>Privacy Policy</span>
+      </h3>
+      <p>
+        本アプリで入力したデータ（氏名・所属・メモ・名刺写真）はすべてお使いのデバイス内にのみ保存されます。外部サーバーへの送信は一切行いません。<br><br>
+        All data entered in the App (name, organization, notes, and business card photos) is stored solely on your device. No data is ever transmitted to external servers.
+      </p>
+      <p>
+        本アプリはGoogle AdMobによる広告を表示します。広告配信の最適化のため、デバイスの広告識別子（IDFA）が使用される場合があります。アプリ初回起動時にトラッキングの許可を求めるダイアログが表示されます。<br><br>
+        The App displays ads provided by Google AdMob. The device's advertising identifier (IDFA) may be used to optimize ad delivery. A tracking permission dialog will appear on first launch.
+      </p>
+      <p>
+        Googleのプライバシーポリシー / Google's Privacy Policy：
+        <a href="https://policies.google.com/privacy" style="color:#0071e3;">https://policies.google.com/privacy</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Support / FAQ -->
+  <section class="support-section">
+    <h3>
+      サポート
+      <span>Support</span>
+    </h3>
+    <dl class="faq">
+      <div class="faq-item">
+        <dt>Q. データはどこに保存されますか？ / Where is my data stored?</dt>
+        <dd>
+          すべてのデータはお使いのデバイス内にのみ保存されます。外部サーバーへの送信は行いません。<br>
+          All data is stored solely on your device and is never sent to external servers.
+        </dd>
+      </div>
+      <div class="faq-item">
+        <dt>Q. データのバックアップはできますか？ / Can I back up my data?</dt>
+        <dd>
+          現在、手動バックアップ機能はありません。iCloudバックアップが有効な場合、デバイスのバックアップに含まれます。<br>
+          Manual backup is not currently supported. Data will be included in your device backup if iCloud Backup is enabled.
+        </dd>
+      </div>
+      <div class="faq-item">
+        <dt>Q. トラッキングの許可設定を変更できますか？ / Can I change the tracking permission?</dt>
+        <dd>
+          iOSの「設定」→「プライバシーとセキュリティ」→「トラッキング」からいつでも変更できます。<br>
+          You can change it anytime in iOS Settings → Privacy & Security → Tracking.
+        </dd>
+      </div>
+      <div class="faq-item">
+        <dt>Q. 記録を誤って削除してしまいました。復元できますか？ / I accidentally deleted a record. Can I restore it?</dt>
+        <dd>
+          削除した記録の復元はできません。操作の際はご注意ください。<br>
+          Deleted records cannot be restored. Please proceed with caution.
+        </dd>
+      </div>
+    </dl>
+  </section>
+
+  <footer>
+    <p>© 2026 Yoshimichi Kato. All rights reserved.</p>
+    <p>
+      <a href="https://yoshi-k-1118.github.io/privacy-policy/">Privacy Policy / プライバシーポリシー</a>
+    </p>
+    <p>iOS 17.0+ | iPhone / iPad</p>
+  </footer>
+
+</body>
+</html>

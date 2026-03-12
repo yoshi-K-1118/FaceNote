@@ -1,0 +1,89 @@
+プライバシーポリシー / Privacy Policy
+FaceNote
+最終更新日 / Last Updated: 2026-03-12
+
+────────────────────────────────────────
+
+■ はじめに / Introduction
+
+FaceNote（以下「本アプリ」）をご利用いただきありがとうございます。
+本プライバシーポリシーは、本アプリにおける個人情報の取り扱いについて説明します。
+
+Thank you for using FaceNote (the "App").
+This Privacy Policy explains how we handle personal information in the App.
+
+────────────────────────────────────────
+
+■ 収集する情報 / Information We Collect
+
+本アプリは、ユーザーが入力した以下の情報をデバイス内にのみ保存します。
+・面会相手の氏名・所属
+・面会日時・議事メモ
+・名刺の写真データ
+
+これらのデータは外部サーバーへ送信されることはなく、すべてお使いのデバイス上にローカル保存されます。
+
+The App stores the following information entered by the user solely on the device:
+・Name and organization of the person you met
+・Date, time, and meeting notes
+・Business card photo data
+
+This data is never transmitted to external servers and is stored locally on your device.
+
+────────────────────────────────────────
+
+■ 広告について / Advertising
+
+本アプリはGoogle AdMob（Google LLC）による広告を表示します。
+AdMobは広告配信の最適化のため、デバイスの広告識別子（IDFA）を使用する場合があります。
+アプリ初回起動時にトラッキングの許可を求めるダイアログが表示されます。
+許可しない場合でも本アプリの機能はご利用いただけますが、パーソナライズ広告は表示されません。
+
+Googleのプライバシーポリシー：https://policies.google.com/privacy
+
+The App displays advertisements provided by Google AdMob (Google LLC).
+AdMob may use the device's advertising identifier (IDFA) to optimize ad delivery.
+A dialog requesting tracking permission will appear when the App is first launched.
+Even if you decline, all features of the App remain available, but personalized ads will not be shown.
+
+Google's Privacy Policy: https://policies.google.com/privacy
+
+────────────────────────────────────────
+
+■ カメラ・フォトライブラリ / Camera & Photo Library
+
+本アプリは名刺の撮影・保存のためにカメラおよびフォトライブラリへのアクセスを求めます。
+取得した画像はデバイス内にのみ保存され、外部に送信されることはありません。
+
+The App requests access to the camera and photo library to capture and save business card images.
+Images obtained are stored only on the device and are never transmitted externally.
+
+────────────────────────────────────────
+
+■ 第三者への提供 / Disclosure to Third Parties
+
+本アプリは、法令に基づく場合を除き、ユーザーの情報を第三者に提供することはありません。
+
+The App does not disclose user information to third parties except as required by law.
+
+────────────────────────────────────────
+
+■ プライバシーポリシーの変更 / Changes to This Policy
+
+本プライバシーポリシーは予告なく変更される場合があります。
+変更後のポリシーはアプリのサポートページに掲載します。
+
+This Privacy Policy may be updated without prior notice.
+The updated policy will be posted on the App's support page.
+
+────────────────────────────────────────
+
+■ お問い合わせ / Contact
+
+プライバシーポリシーに関するご質問は、サポートページよりお問い合わせください。
+https://yoshi-k-1118.github.io/privacy-policy/
+
+For questions regarding this Privacy Policy, please contact us via the support page.
+https://yoshi-k-1118.github.io/privacy-policy/
+
+────────────────────────────────────────
